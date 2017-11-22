@@ -146,9 +146,10 @@ begin
 	     eth_data <= i_ram_data[7:6];
 
 		  if (ram_adr == i_ram_data_size) begin
-				st <= st + 1'b1;		  
+                                ram_re <= 0;
+				st     <= st + 1'b1;		  
 		  end else begin
-		      st          <= 6;		
+		      st     <= 6;		
 		  end
 	 end
 	 
