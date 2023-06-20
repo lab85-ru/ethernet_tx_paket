@@ -1,0 +1,75 @@
+% ----PAKET---- %
+% 192.168.17.255 %
+DEPTH = 60;
+WIDTH = 8;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+0000 : FF; % MAC DST %
+0001 : FF;
+0002 : FF;
+0003 : FF;
+0004 : FF;
+0005 : FF;
+0006 : 00; % MAC SRC %
+0007 : 12;
+0008 : 34;
+0009 : 56;
+000A : 78;
+000B : 90;
+000C : 08; % protokol verhnego urovna IP=0800 %
+000D : 00;
+000E : 45; % IP, 4-version 5-razmer zagolovka %
+000F : 00; 
+0010 : 00; % IP, razmer paketa zagolovok+danie %
+0011 : 2E;
+0012 : B3; % IP, identificator %
+0013 : FE;
+0014 : 00; % IP,  flagi i smehenie segmenta %
+0015 : 00;
+0016 : 80; % IP, vrema gizni (128) %
+0017 : 11; % IP, protokol nihnego urovna (0x11(17)-UDP) %
+0018 : E1; % IP, kontrolnaya summa zagolovka low %
+0019 : A8; % IP, kontrolnaya summa zagolovka high %
+001A : C0; % IP   - SRC 192 %
+001B : A8; % IP   - SRC 168 %
+001C : 11; % IP   - SRC 17 %
+001D : C8; % IP   - SRC 200 %
+001E : C0; % IP - DST 192 %
+001F : A8; % IP - DST 168 %
+0020 : 11; % IP - DST 17 %
+0021 : FF; % IP - DST 255 %
+0022 : 04; % UDP, port SRC %
+0023 : 00;
+0024 : 04; % UDP, port DST %
+0025 : 00;
+0026 : 00; % UDP, dlinna %
+0027 : 1A;
+0028 : 0A; % UDP, kontrolnaya summa %
+0029 : 51;
+002A : 00; % data %
+002B : 01;
+002C : 02;
+002D : 03;
+002E : 04;
+002F : 05;
+0030 : 06;
+0031 : 07;
+0032 : 08;
+0033 : 09;
+0034 : 0A;
+0035 : 0B;
+0036 : 0C;
+0037 : 0D;
+0038 : 0E;
+0039 : 0F;
+003A : 10;
+003B : 11;
+
+% 003C : B8; %
+% 003D : 79; %
+% 003F : 64; %
+% 0040 : 0D; %
+
+END;
